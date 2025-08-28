@@ -303,6 +303,7 @@ function setupCompanyModals() {
     const modal = document.getElementById('companyModal');
     const closeBtn = document.querySelector('.close');
     const companyLogos = document.querySelectorAll('.company-logo');
+    const companyCards = document.querySelectorAll('.company-card');
 
     // Open modal on logo click
     companyLogos.forEach(logo => {
@@ -312,6 +313,39 @@ function setupCompanyModals() {
             
             if (company) {
                 document.getElementById('modalLogo').src = logo.querySelector('img').src;
+                document.getElementById('modalCompanyName').textContent = company.name;
+                document.getElementById('modalCompanyDescription').textContent = company.description;
+                document.getElementById('modalIndustry').textContent = company.industry;
+                document.getElementById('modalFounded').textContent = company.founded;
+                document.getElementById('modalHeadquarters').textContent = company.headquarters;
+                
+                const websiteLink = document.getElementById('modalWebsite');
+                websiteLink.textContent = company.website;
+                websiteLink.href = company.website;
+                
+                const achievementsList = document.getElementById('modalAchievements');
+                achievementsList.innerHTML = '';
+                company.achievements.forEach(achievement => {
+                    const li = document.createElement('li');
+                    li.textContent = achievement;
+                    achievementsList.appendChild(li);
+                });
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Open modal on company card click
+    companyCards.forEach(card => {
+        card.addEventListener('click', () => {
+            const companyId = card.getAttribute('data-company');
+            const company = companyData[companyId];
+            
+            if (company) {
+                const logoImg = card.querySelector('.company-logo-container img');
+                document.getElementById('modalLogo').src = logoImg.src;
                 document.getElementById('modalCompanyName').textContent = company.name;
                 document.getElementById('modalCompanyDescription').textContent = company.description;
                 document.getElementById('modalIndustry').textContent = company.industry;
