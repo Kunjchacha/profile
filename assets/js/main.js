@@ -5,6 +5,70 @@ document.addEventListener('DOMContentLoaded', function() {
     initializeApp();
 });
 
+// Company data for modal popups
+const companyData = {
+    'blenheim-chalcot': {
+        name: 'Blenheim Chalcot India',
+        description: 'A leading venture builder and investment firm',
+        industry: 'Venture Building & Investment',
+        founded: '1998',
+        headquarters: 'London, UK & Mumbai, India',
+        website: 'https://blenheimchalcot.com',
+        achievements: [
+            'Led end-to-end automation initiatives, reducing manual effort by 40%',
+            'Spearheaded campus recruitment drives, hiring 50+ professionals',
+            'Directed 15-member cross-functional teams implementing GitHub Copilot',
+            'Designed and deployed Central Repository, improving accessibility by 30%',
+            'Collaborated with C-suite to fill 20+ leadership roles within 6 weeks'
+        ]
+    },
+    'whitehat-jr': {
+        name: 'Whitehat Jr',
+        description: 'Online coding platform for kids',
+        industry: 'EdTech',
+        founded: '2018',
+        headquarters: 'Mumbai, India',
+        website: 'https://whitehatjr.com',
+        achievements: [
+            'Generated INR 3.64 Cr in revenue within 6 months',
+            'Led 12-member sales team driving INR 22-25 Lakh/month revenue',
+            'Improved individual performance by 30% via Salesforce CRM coaching',
+            'Increased customer referral rates by 15%',
+            'Reduced onboarding time by 50%'
+        ]
+    },
+    'flint-chem': {
+        name: 'Flint Chem',
+        description: 'Chemical distribution and cosmetics company',
+        industry: 'Chemical & Cosmetics',
+        founded: '2020',
+        headquarters: 'Mumbai, India',
+        website: '#',
+        achievements: [
+            'Successfully closed 35+ deals',
+            'Hired and managed team of 70 employees',
+            'Built entire sales distribution network from scratch',
+            'Optimized inventory turnover by 15%',
+            'Marketed entire branch of cosmetic products under MY CARE Brand'
+        ]
+    },
+    'tech-mahindra': {
+        name: 'Tech Mahindra Business Services Ltd',
+        description: 'Global technology consulting and digital solutions',
+        industry: 'Technology & Consulting',
+        founded: '1986',
+        headquarters: 'Pune, India',
+        website: 'https://techmahindra.com',
+        achievements: [
+            'Achieved 110% of quarterly targets',
+            'Led team of 14 professionals',
+            'Developed process automation initiatives',
+            'Contributed to data-driven decision-making',
+            'Handled customer service escalations'
+        ]
+    }
+};
+
 // Initialize Application
 function initializeApp() {
     setupNavigation();
@@ -14,6 +78,7 @@ function initializeApp() {
     setupMobileMenu();
     setupContactLinks();
     setupPerformanceOptimizations();
+    setupCompanyModals();
 }
 
 // ===== NAVIGATION =====
@@ -230,6 +295,68 @@ function setupContactLinks() {
             window.open('https://www.linkedin.com/in/kunjchacha', '_blank');
         });
     }
+}
+
+// ===== COMPANY MODAL FUNCTIONALITY =====
+
+function setupCompanyModals() {
+    const modal = document.getElementById('companyModal');
+    const closeBtn = document.querySelector('.close');
+    const companyLogos = document.querySelectorAll('.company-logo');
+
+    // Open modal on logo click
+    companyLogos.forEach(logo => {
+        logo.addEventListener('click', () => {
+            const companyId = logo.getAttribute('data-company');
+            const company = companyData[companyId];
+            
+            if (company) {
+                document.getElementById('modalLogo').src = logo.querySelector('img').src;
+                document.getElementById('modalCompanyName').textContent = company.name;
+                document.getElementById('modalCompanyDescription').textContent = company.description;
+                document.getElementById('modalIndustry').textContent = company.industry;
+                document.getElementById('modalFounded').textContent = company.founded;
+                document.getElementById('modalHeadquarters').textContent = company.headquarters;
+                
+                const websiteLink = document.getElementById('modalWebsite');
+                websiteLink.textContent = company.website;
+                websiteLink.href = company.website;
+                
+                const achievementsList = document.getElementById('modalAchievements');
+                achievementsList.innerHTML = '';
+                company.achievements.forEach(achievement => {
+                    const li = document.createElement('li');
+                    li.textContent = achievement;
+                    achievementsList.appendChild(li);
+                });
+                
+                modal.style.display = 'block';
+                document.body.style.overflow = 'hidden';
+            }
+        });
+    });
+
+    // Close modal
+    closeBtn.addEventListener('click', () => {
+        modal.style.display = 'none';
+        document.body.style.overflow = 'auto';
+    });
+
+    // Close modal when clicking outside
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && modal.style.display === 'block') {
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto';
+        }
+    });
 }
 
 // ===== PERFORMANCE OPTIMIZATIONS =====

@@ -203,14 +203,21 @@
                 <p class="section-subtitle">A Decade of Strategic Leadership & Innovation</p>
             </div>
             <div class="timeline">
-                <div class="timeline-item reveal-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Program Manager</h3>
-                            <span class="company">Blenheim Chalcot India</span>
-                            <span class="duration">July 2023 - Present</span>
-                        </div>
+                                 <div class="timeline-item reveal-on-scroll">
+                     <div class="timeline-marker"></div>
+                     <div class="timeline-content">
+                         <div class="timeline-header">
+                             <div class="company-info">
+                                 <div class="company-logo" data-company="blenheim-chalcot">
+                                     <img src="https://via.placeholder.com/60x60/1a365d/ffffff?text=BC" alt="Blenheim Chalcot" />
+                                 </div>
+                                 <div class="company-details">
+                                     <h3>Program Manager</h3>
+                                     <span class="company">Blenheim Chalcot India</span>
+                                     <span class="duration">July 2023 - Present</span>
+                                 </div>
+                             </div>
+                         </div>
                         <div class="timeline-body">
                             <p class="role-focus">Process Automations & Transformation | Operational Excellence | Delivery Management & Strategy</p>
                             <p class="reporting">Reports directly to CEO & Director of Technology & Finance Operations</p>
@@ -225,14 +232,21 @@
                     </div>
                 </div>
 
-                <div class="timeline-item reveal-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Senior Manager, Strategic Sales</h3>
-                            <span class="company">Whitehat Jr</span>
-                            <span class="duration">July 2021 - November 2022</span>
-                        </div>
+                                 <div class="timeline-item reveal-on-scroll">
+                     <div class="timeline-marker"></div>
+                     <div class="timeline-content">
+                         <div class="timeline-header">
+                             <div class="company-info">
+                                 <div class="company-logo" data-company="whitehat-jr">
+                                     <img src="https://via.placeholder.com/60x60/38b2ac/ffffff?text=WH" alt="Whitehat Jr" />
+                                 </div>
+                                 <div class="company-details">
+                                     <h3>Senior Manager, Strategic Sales</h3>
+                                     <span class="company">Whitehat Jr</span>
+                                     <span class="duration">July 2021 - November 2022</span>
+                                 </div>
+                             </div>
+                         </div>
                         <div class="timeline-body">
                             <p class="role-focus">Strategic Sales & Leadership | Process Transformation | Revenue Growth & Retention</p>
                             <ul class="achievements">
@@ -245,14 +259,21 @@
                     </div>
                 </div>
 
-                <div class="timeline-item reveal-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Business Head</h3>
-                            <span class="company">Flint Chem</span>
-                            <span class="duration">December 2020 - June 2021</span>
-                        </div>
+                                 <div class="timeline-item reveal-on-scroll">
+                     <div class="timeline-marker"></div>
+                     <div class="timeline-content">
+                         <div class="timeline-header">
+                             <div class="company-info">
+                                 <div class="company-logo" data-company="flint-chem">
+                                     <img src="https://via.placeholder.com/60x60/d69e2e/ffffff?text=FC" alt="Flint Chem" />
+                                 </div>
+                                 <div class="company-details">
+                                     <h3>Business Head</h3>
+                                     <span class="company">Flint Chem</span>
+                                     <span class="duration">December 2020 - June 2021</span>
+                                 </div>
+                             </div>
+                         </div>
                         <div class="timeline-body">
                             <p class="role-focus">Process Automation & Improvements | Sales Funnel Development | Business Expansion</p>
                             <ul class="achievements">
@@ -265,14 +286,21 @@
                     </div>
                 </div>
 
-                <div class="timeline-item reveal-on-scroll">
-                    <div class="timeline-marker"></div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <h3>Manager, Sales & Retention</h3>
-                            <span class="company">Tech Mahindra Business Services Ltd</span>
-                            <span class="duration">May 2019 - December 2020</span>
-                        </div>
+                                 <div class="timeline-item reveal-on-scroll">
+                     <div class="timeline-marker"></div>
+                     <div class="timeline-content">
+                         <div class="timeline-header">
+                             <div class="company-info">
+                                 <div class="company-logo" data-company="tech-mahindra">
+                                     <img src="https://via.placeholder.com/60x60/48bb78/ffffff?text=TM" alt="Tech Mahindra" />
+                                 </div>
+                                 <div class="company-details">
+                                     <h3>Manager, Sales & Retention</h3>
+                                     <span class="company">Tech Mahindra Business Services Ltd</span>
+                                     <span class="duration">May 2019 - December 2020</span>
+                                 </div>
+                             </div>
+                         </div>
                         <div class="timeline-body">
                             <p class="role-focus">Process Transformation | Operational Excellence | Client Relationship Management</p>
                             <ul class="achievements">
@@ -500,6 +528,46 @@
             </div>
         </div>
     </footer>
+
+    <!-- Company Popup Modal -->
+    <div id="companyModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="modal-header">
+                <div class="modal-logo">
+                    <img id="modalLogo" src="" alt="Company Logo" />
+                </div>
+                <div class="modal-company-info">
+                    <h2 id="modalCompanyName"></h2>
+                    <p id="modalCompanyDescription"></p>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="company-details-grid">
+                    <div class="detail-item">
+                        <h4>Industry</h4>
+                        <p id="modalIndustry"></p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Founded</h4>
+                        <p id="modalFounded"></p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Headquarters</h4>
+                        <p id="modalHeadquarters"></p>
+                    </div>
+                    <div class="detail-item">
+                        <h4>Website</h4>
+                        <a id="modalWebsite" href="#" target="_blank"></a>
+                    </div>
+                </div>
+                <div class="company-achievements">
+                    <h4>Key Achievements</h4>
+                    <ul id="modalAchievements"></ul>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
