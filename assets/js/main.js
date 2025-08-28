@@ -133,12 +133,12 @@ function setupThemeToggle() {
     const body = document.body;
     const icon = themeToggle.querySelector('i');
     
-    // Load saved theme
-    const savedTheme = localStorage.getItem('theme') || 'light';
+    // Load saved theme (default to navy blue theme)
+    const savedTheme = localStorage.getItem('theme') || 'dark';
     body.setAttribute('data-theme', savedTheme);
     updateThemeIcon(icon, savedTheme);
     
-    // Theme toggle functionality
+    // Theme toggle functionality (navy blue ↔ light)
     themeToggle.addEventListener('click', () => {
         const currentTheme = body.getAttribute('data-theme');
         const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
