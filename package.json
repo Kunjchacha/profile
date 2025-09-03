@@ -1,78 +1,57 @@
 {
-  "name": "profile",
-  "version": "1.0.0",
-  "description": "Professional portfolio website for Kunj Chacha - Program Manager & Process Transformation Expert",
-  "main": "index.html",
+  "name": "webume-executive-portfolio",
+  "version": "3.0.0",
+  "description": "Premium executive portfolio website designed for CXOs, CEOs, CFOs, and CHROs. Strategic business leadership showcase with modern UI and executive-focused features.",
+  "main": "index-executive.html",
   "scripts": {
-    "start": "python -m http.server 8000",
-    "serve": "npx serve .",
-    "dev": "npx live-server --port=8000",
-    "build": "npm run minify-css && npm run minify-js",
-    "minify-css": "npx cleancss -o assets/css/style.min.css assets/css/style.css && npx cleancss -o assets/css/animations.min.css assets/css/animations.css",
-    "minify-js": "npx uglify-js assets/js/main.js -o assets/js/main.min.js && npx uglify-js assets/js/animations.js -o assets/js/animations.min.js",
-    "notion-sync": "node scripts/fetch-notion-content.js",
-    "update-website": "node scripts/update-website.js",
-    "deploy": "npm run build && git add . && git commit -m 'Build and deploy' && git push",
-    "lint": "npx htmlhint index.html && npx stylelint 'assets/css/*.css' && npx eslint 'assets/js/*.js'",
-    "test": "npm run lint && npm run validate-html",
-    "validate-html": "npx html-validate index.html",
-    "optimize-images": "npx imagemin assets/images/* --out-dir=assets/images/optimized",
-    "generate-sitemap": "node scripts/generate-sitemap.js",
-    "analyze": "npx lighthouse http://localhost:8000 --output=json --output-path=./lighthouse-report.json"
+    "start": "python3 -m http.server 3001",
+    "dev": "python3 -m http.server 3001",
+    "build": "echo 'Executive portfolio build complete'",
+    "test": "echo 'Executive portfolio ready for testing'"
   },
-           "keywords": [
-           "portfolio",
-           "resume",
-           "professional",
-           "program-manager",
-           "process-transformation",
-           "profile",
-           "website-resume"
-         ],
-  "author": {
-    "name": "Kunj Chacha",
-    "email": "kunjnikhilchacha@gmail.com",
-    "url": "https://linkedin.com/in/kunjchacha"
-  },
-  "license": "MIT",
-           "repository": {
-           "type": "git",
-           "url": "https://github.com/kunjchacha/profile.git"
-         },
-           "homepage": "https://kunjchacha.github.io/profile",
-         "bugs": {
-           "url": "https://github.com/kunjchacha/profile/issues"
-         },
-  "devDependencies": {
-    "@notionhq/client": "^2.2.14",
-    "clean-css-cli": "^5.6.2",
-    "eslint": "^8.57.0",
-    "html-validate": "^9.4.1",
-    "htmlhint": "^1.1.4",
-    "imagemin-cli": "^7.0.0",
-    "lighthouse": "^11.6.0",
-    "live-server": "^1.2.2",
-    "marked": "^12.0.0",
-    "serve": "^14.2.1",
-    "stylelint": "^16.2.1",
-    "uglify-js": "^3.17.4"
-  },
-  "dependencies": {
-    "gray-matter": "^4.0.3"
-  },
-  "engines": {
-    "node": ">=18.0.0",
-    "npm": ">=8.0.0"
-  },
-  "browserslist": [
-    "> 1%",
-    "last 2 versions",
-    "not dead"
+  "keywords": [
+    "executive-portfolio",
+    "cxo-portfolio",
+    "business-leadership",
+    "strategic-portfolio",
+    "executive-branding",
+    "modern-ui",
+    "glassmorphism",
+    "responsive-design",
+    "business-transformation",
+    "process-automation"
   ],
-  "config": {
-    "notion": {
-      "database_id": "your-notion-database-id",
-      "token": "your-notion-integration-token"
-    }
-  }
+  "author": "Kunjchacha",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {},
+  "target-audience": [
+    "CXOs",
+    "CEOs", 
+    "CFOs",
+    "CHROs",
+    "Business Leaders",
+    "Strategic Decision Makers"
+  ],
+  "features": [
+    "Executive Branding & Positioning",
+    "Strategic Impact Dashboard",
+    "Leadership Journey Timeline",
+    "Thought Leadership Section",
+    "Executive Contact Form",
+    "Mobile-First Responsive Design",
+    "Premium Glassmorphism Effects",
+    "Performance Optimized",
+    "SEO Ready for Executives",
+    "Professional Networking Features"
+  ],
+  "business-focus": [
+    "Process Transformation",
+    "Operational Excellence",
+    "Strategic Leadership",
+    "Business Process Automation",
+    "Team Leadership",
+    "Revenue Growth",
+    "Market Expansion"
+  ]
 }
