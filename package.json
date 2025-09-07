@@ -11,6 +11,14 @@
     "sync": "node scripts/linkedin-auto-sync.js",
     "sync-manual": "node scripts/fortnightly-scheduler.js sync",
     "scheduler": "node scripts/fortnightly-scheduler.js start",
+    "refresh-linkedin": "node scripts/refresh-linkedin-data.js",
+    "update-linkedin": "node scripts/update-linkedin-manual.js",
+    "parse-linkedin-export": "node scripts/linkedin-export-parser.js",
+    "linkedin-browser-extension": "node scripts/linkedin-browser-extension.js",
+    "linkedin-playwright-auth": "node scripts/linkedin-playwright-auth.js",
+    "auto-sync": "node scripts/auto-linkedin-sync.js",
+    "auto-scheduler": "node scripts/auto-scheduler.js start",
+    "auto-sync-manual": "node scripts/auto-scheduler.js sync",
     "deploy": "git add . && git commit -m 'Auto-sync: Update portfolio from LinkedIn' && git push origin main"
   },
   "keywords": [
@@ -27,15 +35,16 @@
   ],
   "author": "Kunjchacha",
   "license": "MIT",
-  "devDependencies": {},
   "dependencies": {
-    "@notionhq/client": "^2.2.15",
+    "csv-parser": "^3.2.0",
+    "dotenv": "^16.3.1",
     "node-cron": "^3.0.3",
-    "dotenv": "^16.3.1"
+    "playwright": "^1.55.0",
+    "puppeteer": "^24.19.0"
   },
   "target-audience": [
     "CXOs",
-    "CEOs", 
+    "CEOs",
     "CFOs",
     "CHROs",
     "Business Leaders",

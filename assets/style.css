@@ -298,7 +298,13 @@ p {
     background: var(--primary);
 }
 
-.experience-timeline {
+/* Education Section */
+.education {
+    background: var(--secondary);
+}
+
+.experience-timeline,
+.education-timeline {
     max-width: 900px;
     margin: 0 auto;
 }
