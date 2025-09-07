@@ -4,9 +4,17 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+<<<<<<< HEAD
 # Production builds
 dist/
 build/
+=======
+# Build outputs
+dist/
+build/
+*.min.css
+*.min.js
+>>>>>>> 4d72cca9859efa32b9d36777b3cd1b5d32e1da50
 
 # Environment variables
 .env
@@ -20,7 +28,10 @@ build/
 .idea/
 *.swp
 *.swo
+<<<<<<< HEAD
 *~
+=======
+>>>>>>> 4d72cca9859efa32b9d36777b3cd1b5d32e1da50
 
 # OS generated files
 .DS_Store
@@ -47,3 +58,9 @@ coverage/
 # Temporary folders
 tmp/
 temp/
+<<<<<<< HEAD
+=======
+
+# Notion sync data
+data/content.json
+>>>>>>> 4d72cca9859efa32b9d36777b3cd1b5d32e1da50
