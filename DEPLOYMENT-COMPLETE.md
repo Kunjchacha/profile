@@ -58,9 +58,9 @@ PROFILE/
 ### **3. Your Website URL**
 **https://kunjchacha.github.io/profile**
 
-### **4. Notion Integration (Optional)**
-- Follow `notion-setup.md` guide
-- Edit content in Notion → Website updates automatically
+### **4. LinkedIn Auto-Sync (Active)**
+- Follow `AUTO-SYNC-GUIDE.md` guide
+- LinkedIn profile → Website updates automatically
 - No coding required for future updates
 
 ## **📊 Your Professional Information**
@@ -89,9 +89,9 @@ PROFILE/
 2. Run `./deploy.ps1` script
 3. Changes deploy automatically
 
-### **Option 2: Notion Integration (Recommended)**
-1. Set up Notion database
-2. Edit content in Notion
+### **Option 2: LinkedIn Auto-Sync (Recommended)**
+1. LinkedIn profile updates automatically sync
+2. No manual editing required
 3. Website updates automatically via GitHub Actions
 
 ## **📱 Testing Your Website**
@@ -130,11 +130,11 @@ python -m http.server 8000
 
 ### **If You Need Help**
 1. **Check documentation**: README.md
-2. **Review setup guides**: setup-github.md, notion-setup.md
+2. **Review setup guides**: setup-github.md, AUTO-SYNC-GUIDE.md
 3. **Run deployment script**: `./deploy.ps1`
 
 ### **Regular Maintenance**
-- **Content Updates**: Via Notion or direct editing
+- **Content Updates**: Via LinkedIn auto-sync or direct editing
 - **Security**: GitHub automatically handles updates
 - **Performance**: Optimized for speed and SEO
 
