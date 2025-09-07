@@ -1,0 +1,58 @@
+{
+  "content": {
+    "profile": {
+      "name": "Kunj Chacha",
+      "title": "Program Manager & Process Transformation Expert",
+      "location": "India",
+      "summary": "Experienced Program Manager with expertise in process transformation, automation, and team leadership. Proven track record of delivering measurable business outcomes.",
+      "lastUpdated": "2025-09-06T11:34:29.764Z"
+    },
+    "experience": [
+      {
+        "title": "Program Manager",
+        "company": "Current Company",
+        "duration": "2020 - Present",
+        "location": "India",
+        "description": "Leading cross-functional teams and driving process transformation initiatives.",
+        "achievements": [
+          "Delivered 40% efficiency gains through process automation",
+          "Led team of 24+ members across multiple projects",
+          "Generated INR 3.6 Cr+ in measurable business outcomes"
+        ]
+      }
+    ],
+    "education": [
+      {
+        "degree": "Master of Business Administration",
+        "institution": "University Name",
+        "duration": "2018 - 2020",
+        "description": "Specialization in Business Process Management"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Program Management",
+        "endorsements": "50+",
+        "level": "Expert"
+      },
+      {
+        "name": "Process Transformation",
+        "endorsements": "45+",
+        "level": "Expert"
+      },
+      {
+        "name": "Team Leadership",
+        "endorsements": "40+",
+        "level": "Expert"
+      },
+      {
+        "name": "Business Automation",
+        "endorsements": "35+",
+        "level": "Expert"
+      }
+    ]
+  },
+  "lastUpdated": "2025-09-06T11:34:29.764Z",
+  "version": 1757158469764,
+  "source": "manual-linkedin-data-extraction"
+}

@@ -1,0 +1,65 @@
+{
+  "name": "webume-executive-portfolio",
+  "version": "3.0.0",
+  "description": "Premium executive portfolio website designed for CXOs, CEOs, CFOs, and CHROs. Strategic business leadership showcase with modern UI and executive-focused features.",
+  "main": "index-executive.html",
+  "scripts": {
+    "start": "python3 -m http.server 3001",
+    "dev": "python3 -m http.server 3001",
+    "build": "echo 'Portfolio build complete'",
+    "test": "echo 'Portfolio ready for testing'",
+    "sync": "node scripts/linkedin-auto-sync.js",
+    "sync-manual": "node scripts/fortnightly-scheduler.js sync",
+    "scheduler": "node scripts/fortnightly-scheduler.js start",
+    "deploy": "git add . && git commit -m 'Auto-sync: Update portfolio from LinkedIn' && git push origin main"
+  },
+  "keywords": [
+    "executive-portfolio",
+    "cxo-portfolio",
+    "business-leadership",
+    "strategic-portfolio",
+    "executive-branding",
+    "modern-ui",
+    "glassmorphism",
+    "responsive-design",
+    "business-transformation",
+    "process-automation"
+  ],
+  "author": "Kunjchacha",
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {
+    "@notionhq/client": "^2.2.15",
+    "node-cron": "^3.0.3",
+    "dotenv": "^16.3.1"
+  },
+  "target-audience": [
+    "CXOs",
+    "CEOs", 
+    "CFOs",
+    "CHROs",
+    "Business Leaders",
+    "Strategic Decision Makers"
+  ],
+  "features": [
+    "Executive Branding & Positioning",
+    "Strategic Impact Dashboard",
+    "Leadership Journey Timeline",
+    "Thought Leadership Section",
+    "Executive Contact Form",
+    "Mobile-First Responsive Design",
+    "Premium Glassmorphism Effects",
+    "Performance Optimized",
+    "SEO Ready for Executives",
+    "Professional Networking Features"
+  ],
+  "business-focus": [
+    "Process Transformation",
+    "Operational Excellence",
+    "Strategic Leadership",
+    "Business Process Automation",
+    "Team Leadership",
+    "Revenue Growth",
+    "Market Expansion"
+  ]
+}

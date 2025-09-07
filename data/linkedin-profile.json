@@ -1,0 +1,61 @@
+{
+  "name": "Kunj Chacha",
+  "headline": "Program Manager at Blenheim Chalcot | Building Innovative Technology Businesses",
+  "location": "Mumbai, Maharashtra, India",
+  "about": "Results-driven business leader with 10+ years of experience in sales, operations, project management, and process automation across diverse industries. Proven ability to lead cross-functional teams, optimize workflows, and drive revenue growth, having successfully delivered INR 3.6 Cr+ in sales while improving operational efficiency by 40%.",
+  "experience": [
+    {
+      "title": "Program Manager",
+      "company": "Blenheim Chalcot India",
+      "duration": "July 2023 - Present",
+      "description": "Leading process automation initiatives and operational excellence. Led end-to-end automation initiatives resulting in 40% efficiency gain. Spearheaded campus recruitment drives with 50+ hires and 95% retention. Generated INR 3.64 Cr revenue in 6 months. Managed cross-functional teams of 15-24 members."
+    },
+    {
+      "title": "Senior Manager, Strategic Sales",
+      "company": "Whitehat Jr",
+      "duration": "2021 - 2022",
+      "description": "Drove UK market expansion generating INR 3.64 Cr revenue, exceeding targets by 20%. Achieved average deal size of INR 85,000 with strategic sales approach."
+    },
+    {
+      "title": "Business Head",
+      "company": "Flint Chem",
+      "duration": "2020 - 2021",
+      "description": "Led process automation and business expansion initiatives. Optimized operational workflows for enhanced efficiency."
+    },
+    {
+      "title": "Manager, Sales & Retention",
+      "company": "Tech Mahindra",
+      "duration": "2019 - 2020",
+      "description": "Led process transformation and client management. Improved customer retention through strategic initiatives."
+    }
+  ],
+  "education": [
+    {
+      "school": "Indian Institute of Management (IIM)",
+      "degree": "Master of Business Administration (MBA)",
+      "duration": "2015 - 2017",
+      "description": "Specialization in Operations Management and Strategic Leadership"
+    },
+    {
+      "school": "Mumbai University",
+      "degree": "Bachelor of Technology (B.Tech)",
+      "duration": "2014 - 2018",
+      "description": "Computer Science Engineering"
+    }
+  ],
+  "skills": [
+    "Project Management",
+    "Strategic Planning",
+    "Process Optimization",
+    "Team Leadership",
+    "Business Analysis",
+    "Stakeholder Management",
+    "Process Transformation",
+    "Salesforce CRM",
+    "Data Analytics",
+    "Revenue Growth"
+  ],
+  "lastUpdated": "2025-09-07T06:57:29.874Z",
+  "syncTimestamp": "2025-09-07T06:57:29.874Z",
+  "syncVersion": "1.0.0"
+}
