@@ -28,9 +28,8 @@ PROFILE/
 │       ├── main.js         # Core functionality
 │       └── animations.js   # Animation logic
 ├── .github/workflows/      # GitHub Actions
-├── scripts/                # Notion integration
+├── scripts/                # LinkedIn auto-sync integration
 ├── setup-github.md         # GitHub setup guide
-├── notion-setup.md         # Notion integration guide
 ├── deploy.ps1              # Deployment script
 └── README.md               # Documentation
 ```
