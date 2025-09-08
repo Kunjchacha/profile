@@ -19,6 +19,9 @@
     "auto-sync": "node scripts/auto-linkedin-sync.js",
     "auto-scheduler": "node scripts/auto-scheduler.js start",
     "auto-sync-manual": "node scripts/auto-scheduler.js sync",
+    "sync-google-docs": "node scripts/google-docs-sync.js",
+    "sync-google-monthly": "node scripts/google-docs-monthly.js start",
+    "test-google-sync": "node scripts/google-docs-sync.js",
     "deploy": "git add . && git commit -m 'Auto-sync: Update portfolio from LinkedIn' && git push origin main"
   },
   "keywords": [
