@@ -1241,3 +1241,103 @@ p {
         font-size: 0.9rem;
     }
 }
+
+/* ========================================
+   COMPACT SKILLS SECTION
+   ======================================== */
+
+.skills-compact {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-lg);
+    margin-top: var(--space-lg);
+}
+
+.skill-category-compact {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: var(--space-lg);
+    transition: var(--transition);
+}
+
+.skill-category-compact:hover {
+    border-color: var(--accent);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.category-title-compact {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-md);
+}
+
+.category-title-compact i {
+    color: var(--accent);
+    font-size: 1.2rem;
+}
+
+.skills-horizontal {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-sm);
+}
+
+.skill-tag {
+    display: inline-flex;
+    align-items: center;
+    padding: var(--space-xs) var(--space-sm);
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition: var(--transition);
+    border: 1px solid transparent;
+}
+
+.skill-tag.expert {
+    background: rgba(16, 185, 129, 0.1);
+    color: #10b981;
+    border-color: rgba(16, 185, 129, 0.2);
+}
+
+.skill-tag.advanced {
+    background: rgba(99, 102, 241, 0.1);
+    color: var(--accent);
+    border-color: rgba(99, 102, 241, 0.2);
+}
+
+.skill-tag.intermediate {
+    background: rgba(245, 158, 11, 0.1);
+    color: #f59e0b;
+    border-color: rgba(245, 158, 11, 0.2);
+}
+
+.skill-tag:hover {
+    transform: translateY(-1px);
+    box-shadow: var(--shadow-md);
+}
+
+/* Mobile Responsiveness for Compact Skills */
+@media (max-width: 768px) {
+    .skills-compact {
+        gap: var(--space-md);
+    }
+    
+    .skill-category-compact {
+        padding: var(--space-md);
+    }
+    
+    .skills-horizontal {
+        gap: var(--space-xs);
+    }
+    
+    .skill-tag {
+        font-size: 0.8rem;
+        padding: 0.3rem var(--space-sm);
+    }
+}

@@ -22,8 +22,8 @@ jobs:
       - name: Install dependencies
         run: npm ci
         
-      - name: Run Google Docs Sync
-        run: npm run sync-google-docs
+      - name: Run Google Docs Real Sync
+        run: npm run sync-google-real
         
       - name: Commit and push changes
         run: |
