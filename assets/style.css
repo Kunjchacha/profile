@@ -578,6 +578,38 @@ p {
     color: var(--primary-light);
 }
 
+.contact-cta {
+    text-align: center;
+    margin-top: 3rem;
+    padding: 2rem;
+    background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-surface) 100%);
+    border-radius: 16px;
+    border: 1px solid var(--border);
+}
+
+.contact-message {
+    font-size: var(--text-lg);
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    font-weight: var(--font-normal);
+}
+
+.contact-btn {
+    padding: 1rem 2rem;
+    font-size: var(--text-lg);
+    font-weight: var(--font-semibold);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
+}
+
 .projects-skills-title-right {
     text-align: right !important;
 }
@@ -1908,6 +1940,21 @@ p {
     .profile-image {
         width: 300px;
         height: 300px;
+    }
+    
+    .contact-cta {
+        margin-top: 2rem;
+        padding: 1.5rem;
+    }
+    
+    .contact-message {
+        font-size: var(--text-base);
+        margin-bottom: 1.5rem;
+    }
+    
+    .contact-btn {
+        padding: 0.875rem 1.5rem;
+        font-size: var(--text-base);
     }
     
     .timeline-item {
