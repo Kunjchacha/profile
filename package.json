@@ -23,7 +23,10 @@
     "sync-google-real": "node scripts/google-docs-real-sync.js",
     "sync-google-monthly": "node scripts/google-docs-monthly.js start",
     "test-google-sync": "node scripts/google-docs-sync.js",
-    "deploy": "git add . && git commit -m 'Auto-sync: Update portfolio from LinkedIn' && git push origin main"
+    "fetch-resume": "node scripts/resume-specific-fetch.js",
+    "update-from-resume": "node scripts/update-portfolio-from-resume.js",
+    "resume-sync": "npm run fetch-resume && npm run update-from-resume",
+    "deploy": "git add . && git commit -m 'Auto-sync: Update portfolio from Resume' && git push origin main"
   },
   "keywords": [
     "executive-portfolio",

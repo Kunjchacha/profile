@@ -39,478 +39,1429 @@
     <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     
     <!-- Styles -->
-    <link rel="stylesheet" href="assets/style.css">
+    <link rel="stylesheet" href="assets/style.css?v=1">
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <!-- Enhanced Interactions -->
     <script src="assets/js/enhanced-interactions.js" defer></script>
+    
+    <!-- Critical CSS Fallback to ensure page loads -->
+    <style>
+        /* Critical styles to ensure page loads immediately */
+        body {
+            background: #0a0a0a !important;
+            color: white !important;
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif !important;
+            margin: 0 !important;
+            padding: 0 !important;
+        }
+        
+        .hero {
+            min-height: 100vh !important;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+            display: flex !important;
+            align-items: center !important;
+            justify-content: center !important;
+        }
+        
+        .hero-title {
+            font-size: 3rem !important;
+            color: #2dd4bf !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem !important;
+            color: #94a3b8 !important;
+            margin-bottom: 1rem !important;
+        }
+        
+        .btn {
+            display: inline-block !important;
+            padding: 1rem 2rem !important;
+            background: #2dd4bf !important;
+            color: white !important;
+            text-decoration: none !important;
+            border-radius: 8px !important;
+            margin: 0.5rem !important;
+            transition: all 0.3s ease !important;
+        }
+        
+        .btn:hover {
+            background: #14b8a6 !important;
+            transform: translateY(-2px) !important;
+        }
+        
+        .section {
+            padding: 3rem 0 !important;
+            border-bottom: 1px solid #334155 !important;
+        }
+        
+        .section-title {
+            font-size: 2.5rem !important;
+            text-align: center !important;
+            margin-bottom: 2rem !important;
+            color: #e2e8f0 !important;
+        }
+        
+        /* Ensure all sections are visible */
+        .about, .skills, .education, .projects, .awards, .contact {
+            display: block !important;
+            visibility: visible !important;
+            opacity: 1 !important;
+        }
+        
+        /* Ensure text is visible */
+        p, h1, h2, h3, h4, h5, h6, span, div {
+            color: inherit !important;
+        }
+        
+        /* Force visibility of all elements */
+        * {
+            visibility: visible !important;
+        }
+        
+        /* Company logo fallbacks */
+        .company-logo-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #2dd4bf, #14b8a6);
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            border-radius: 8px;
+        }
+        
+        /* Profile image fallback */
+        .profile-image-fallback {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #6366f1, #8b5cf6);
+            border-radius: 50%;
+        }
+        
+        .profile-initials {
+            color: white;
+            font-size: 3rem;
+            font-weight: bold;
+        }
+        
+        /* Horizontal Skills Layout - Optimized for Full Width */
+        .skills-horizontal {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 1rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        .skill-category-horizontal {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .skill-category-horizontal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+        }
+        
+        .skill-category-horizontal:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(45, 212, 191, 0.2);
+            border-color: var(--primary);
+        }
+        
+        .category-title-horizontal {
+            color: #e2e8f0;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        
+        .category-title-horizontal i {
+            color: #2dd4bf;
+        }
+        
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+        }
+        
+        .skill-tag {
+            padding: 0.75rem 1.25rem;
+            border-radius: 25px;
+            font-size: var(--text-sm);
+            font-weight: var(--font-semibold);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .skill-tag::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .skill-tag:hover::before {
+            left: 100%;
+        }
+        
+        .skill-tag.expert {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+        }
+        
+        .skill-tag.advanced {
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--secondary-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+        }
+        
+        .skill-tag.intermediate {
+            background: linear-gradient(135deg, var(--accent) 0%, var(--accent-dark) 100%);
+            color: white;
+            box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+        }
+        
+        .skill-tag:hover {
+            transform: translateY(-2px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @media (max-width: 1200px) {
+            .skills-horizontal {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .skills-tags {
+                justify-content: center;
+            }
+            
+            .awards-timeline {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Enhanced Awards Section - Optimized for Full Width */
+        .awards-timeline {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            max-width: 1600px;
+            margin: 0 auto;
+        }
+        
+        @media (min-width: 1400px) {
+            .awards-timeline {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .award-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 1.5rem;
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+            border-radius: 20px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .award-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--gold) 0%, var(--primary) 50%, var(--accent) 100%);
+        }
+        
+        .award-item:hover {
+            transform: translateY(-6px) scale(1.02);
+            box-shadow: 0 16px 40px rgba(245, 158, 11, 0.2);
+            border-color: var(--gold);
+        }
+        
+        .award-icon {
+            width: 70px;
+            height: 70px;
+            background: linear-gradient(135deg, var(--gold) 0%, var(--gold-dark) 100%);
+            border-radius: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.8rem;
+            flex-shrink: 0;
+            box-shadow: 0 8px 20px rgba(245, 158, 11, 0.3);
+        }
+        
+        .award-content {
+            flex: 1;
+        }
+        
+        .award-title {
+            color: #e2e8f0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+        
+        .award-company {
+            color: #2dd4bf;
+            font-size: 1.1rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .award-year {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            font-weight: 500;
+            background: #334155;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 1rem;
+        }
+        
+        .award-description {
+            color: #cbd5e1;
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+        
+        @media (max-width: 768px) {
+            .award-item {
+                flex-direction: column;
+                text-align: center;
+                gap: 1rem;
+            }
+            
+            .award-icon {
+                align-self: center;
+            }
+        }
+        
+        /* Enhanced Project Cards */
+        .project-image {
+            position: relative;
+            height: 220px;
+            background: linear-gradient(135deg, #1e293b, #334155);
+            border-radius: 16px 16px 0 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+        
+        .project-icon {
+            font-size: 3.5rem;
+            color: #2dd4bf;
+            z-index: 2;
+            transition: all 0.3s ease;
+        }
+        
+        .project-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(45, 212, 191, 0.1), rgba(20, 184, 166, 0.1));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .project-overlay i {
+            font-size: 4.5rem;
+            color: #2dd4bf;
+        }
+        
+        .project-card:hover .project-overlay {
+            opacity: 1;
+        }
+        
+        .project-card:hover .project-icon {
+            transform: scale(1.1);
+        }
+        
+        .project-content {
+            padding: 2.5rem;
+            background: #1e293b;
+            border-radius: 0 0 16px 16px;
+            border: 1px solid #334155;
+            border-top: none;
+        }
+        
+        .project-title {
+            color: #e2e8f0;
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .project-description {
+            color: #cbd5e1;
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-metrics {
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+        
+        .metric {
+            text-align: center;
+            flex: 1;
+            min-width: 80px;
+        }
+        
+        .metric-value {
+            display: block;
+            color: #2dd4bf;
+            font-size: 1.5rem;
+            font-weight: 700;
+        }
+        
+        .metric-label {
+            display: block;
+            color: #94a3b8;
+            font-size: 0.8rem;
+            font-weight: 500;
+        }
+        
+        .project-tech {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .project-links {
+            display: flex;
+            gap: 1rem;
+        }
+        
+        .project-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            background: #2dd4bf;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .project-link:hover {
+            background: #14b8a6;
+            transform: translateY(-2px);
+        }
+        
+        @media (max-width: 768px) {
+            .project-metrics {
+                justify-content: center;
+            }
+            
+            .project-links {
+                flex-direction: column;
+            }
+        }
+        
+        /* Enhanced Interactive Elements */
+        .btn {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn:hover::before {
+            left: 100%;
+        }
+        
+        /* Smooth scroll animations */
+        .section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s ease;
+        }
+        
+        .section.animate-in {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        /* Enhanced hover effects */
+        .timeline-content:hover,
+        .project-card:hover,
+        .award-item:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Loading animation for images */
+        .profile-image {
+            transition: opacity 0.3s ease;
+        }
+        
+        .profile-image.loading {
+            opacity: 0.5;
+        }
+        
+        /* Enhanced focus states for accessibility */
+        .btn:focus,
+        .project-link:focus,
+        .skill-tag:focus {
+            outline: 2px solid #2dd4bf;
+            outline-offset: 2px;
+        }
+        
+        /* Smooth transitions for all interactive elements */
+        * {
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+        }
+        
+        /* Scroll Animations - visible by default; animate when .visible is added */
+        .fade-in {
+            opacity: 1;
+            transform: none;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .fade-in:not(.visible) {
+            opacity: 1;
+            transform: none;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        .slide-in-left {
+            opacity: 1;
+            transform: none;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .slide-in-left:not(.visible),
+        .slide-in-left.visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        .slide-in-right {
+            opacity: 1;
+            transform: none;
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+        
+        .slide-in-right:not(.visible),
+        .slide-in-right.visible {
+            opacity: 1;
+            transform: none;
+        }
+        
+        .scale-in {
+            opacity: 0;
+            transform: scale(0.8);
+            transition: all 0.6s ease;
+        }
+        
+        .scale-in.visible {
+            opacity: 1;
+            transform: scale(1);
+        }
+        
+        /* Staggered animations */
+        .stagger-1 { transition-delay: 0.1s; }
+        .stagger-2 { transition-delay: 0.2s; }
+        .stagger-3 { transition-delay: 0.3s; }
+        .stagger-4 { transition-delay: 0.4s; }
+        .stagger-5 { transition-delay: 0.5s; }
+        
+        /* Enhanced hover effects */
+        .project-card:hover {
+            transform: translateY(-8px) scale(1.02);
+        }
+        
+        .skill-category-horizontal:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+        
+        .award-item:hover {
+            transform: translateY(-6px) scale(1.02);
+        }
+        
+        .achievement-metric:hover {
+            transform: translateY(-4px) scale(1.05);
+        }
+        
+        /* Smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        /* Loading animation for page */
+        .page-loading {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Pulse animation for CTA buttons */
+        .btn-primary {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        /* Enhanced Contact Section */
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .contact {
+            background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+            position: relative;
+        }
+        
+        .contact::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 20% 80%, rgba(45, 212, 191, 0.05) 0%, transparent 50%),
+                        radial-gradient(circle at 80% 20%, rgba(59, 130, 246, 0.05) 0%, transparent 50%);
+            pointer-events: none;
+        }
+        
+        .contact-form {
+            background: #1e293b;
+            border-radius: 16px;
+            padding: 2.5rem;
+            border: 1px solid #334155;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            color: #e2e8f0;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 1rem;
+            background: #0f172a;
+            border: 1px solid #334155;
+            border-radius: 8px;
+            color: #e2e8f0;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #2dd4bf;
+            box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.1);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+        
+        .contact-info-title {
+            color: #e2e8f0;
+            font-size: 1.8rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        
+        .contact-cards {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1rem;
+        }
+        
+        .contact-card {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 100%);
+        }
+        
+        .contact-card:hover {
+            transform: translateY(-4px) scale(1.02);
+            box-shadow: 0 12px 32px rgba(45, 212, 191, 0.2);
+            border-color: var(--primary);
+        }
+        
+        .contact-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            flex-shrink: 0;
+            box-shadow: 0 4px 12px rgba(45, 212, 191, 0.3);
+        }
+        
+        .contact-details h4 {
+            color: #e2e8f0;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+        }
+        
+        .contact-details p,
+        .contact-details a {
+            color: #94a3b8;
+            font-size: 0.9rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        
+        .contact-details a:hover {
+            color: #2dd4bf;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+        }
+        
+        .social-link {
+            width: 50px;
+            height: 50px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+        
+        .social-link:hover {
+            background: #2dd4bf;
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(45, 212, 191, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+        }
+        
+        /* Enhanced About Section */
+        .about-intro {
+            margin-bottom: 2rem;
+        }
+        
+        .about-text.current-role {
+            background: linear-gradient(135deg, #1e293b, #334155);
+            border-left: 4px solid #2dd4bf;
+            padding: 1.5rem;
+            border-radius: 8px;
+            margin-bottom: 0;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+        }
+        
+        .about-text.current-role i {
+            color: #2dd4bf;
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
+            flex-shrink: 0;
+        }
+        
+        .about-achievements {
+            margin: 2rem 0;
+        }
+        
+        .achievement-highlight {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            background: #1e293b;
+            padding: 2rem;
+            border-radius: 12px;
+            border: 1px solid #334155;
+        }
+        
+        .achievement-metric {
+            text-align: center;
+            padding: 2rem 1.5rem;
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .achievement-metric::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(90deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+        }
+        
+        .achievement-metric:hover {
+            transform: translateY(-4px) scale(1.02);
+            border-color: var(--primary);
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
+        }
+        
+        .metric-number {
+            display: block;
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 50%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 0.75rem;
+            line-height: 1;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: countUp 2s ease-out;
+        }
+        
+        @keyframes countUp {
+            from {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+        
+        .metric-label {
+            display: block;
+            font-size: var(--text-sm);
+            color: var(--text-muted);
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .about-experience {
+            margin-top: 2rem;
+        }
+        
+        .about-experience .about-text {
+            margin-bottom: 1.5rem;
+            line-height: 1.7;
+        }
+        
+        .about-experience .about-text:last-child {
+            margin-bottom: 0;
+            font-style: italic;
+            color: #94a3b8;
+        }
+        
+        @media (max-width: 768px) {
+            .achievement-highlight {
+                grid-template-columns: 1fr;
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+            
+            .about-text.current-role {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                align-items: stretch;
+            }
+            
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            .skill-category-horizontal {
+                padding: 1.5rem;
+            }
+            
+            .award-item {
+                padding: 1.5rem;
+                gap: 1rem;
+            }
+            
+            .award-icon {
+                width: 60px;
+                height: 60px;
+                font-size: 1.5rem;
+            }
+        }
+        
+        /* Enhanced Mobile Responsiveness */
+        @media (max-width: 768px) {
+            /* Enhanced Typography improvements */
+            .hero-title {
+                font-size: var(--text-4xl);
+                line-height: var(--leading-tight);
+                margin-bottom: var(--space-lg);
+            }
+            
+            .hero-subtitle {
+                font-size: var(--text-lg);
+                margin-bottom: var(--space-md);
+                line-height: var(--leading-relaxed);
+            }
+            
+            .hero-description {
+                font-size: var(--text-base);
+                margin-bottom: var(--space-2xl);
+                line-height: var(--leading-relaxed);
+            }
+            
+            .section-title {
+                font-size: var(--text-4xl);
+                margin-bottom: var(--space-2xl);
+            }
+            
+            /* Enhanced Button improvements */
+            .btn {
+                padding: 1.25rem 2rem;
+                font-size: var(--text-lg);
+                min-height: 56px;
+                min-width: 56px;
+                font-weight: var(--font-semibold);
+                border-radius: 12px;
+            }
+            
+            .skill-tag {
+                padding: 1rem 1.5rem;
+                font-size: var(--text-sm);
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            
+            .hero-actions {
+                flex-direction: column;
+                gap: 1rem;
+                align-items: stretch;
+            }
+            
+            .hero-actions .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            /* Section improvements */
+            .section {
+                padding: 3rem 0;
+            }
+            
+            .section-title {
+                font-size: 2rem;
+                margin-bottom: 1.5rem;
+            }
+            
+            .section-description {
+                font-size: 1rem;
+                margin-bottom: 2rem;
+            }
+            
+            /* About section mobile */
+            .about-content {
+                max-width: 100%;
+            }
+            
+            .about-text {
+                font-size: 1rem;
+                line-height: 1.6;
+            }
+            
+            /* Skills section mobile */
+            .skills-horizontal {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .skill-category-horizontal {
+                padding: 1.5rem;
+            }
+            
+            .category-title-horizontal {
+                font-size: 1.1rem;
+            }
+            
+            .skill-tag {
+                padding: 0.6rem 1rem;
+                font-size: 0.9rem;
+            }
+            
+            /* Projects section mobile */
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .project-card {
+                margin-bottom: 0;
+            }
+            
+            .project-content {
+                padding: 2rem;
+            }
+            
+            .project-title {
+                font-size: 1.3rem;
+            }
+            
+            .project-description {
+                font-size: 0.95rem;
+            }
+            
+            /* Awards section mobile */
+            .awards-timeline {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+            
+            .award-item {
+                padding: 1.5rem;
+            }
+            
+            /* Contact section mobile */
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+            
+            .contact-form {
+                padding: 2rem;
+            }
+            
+            .contact-cards {
+                grid-template-columns: 1fr;
+            }
+            
+            .contact-card {
+                padding: 1.5rem;
+            }
+            
+            /* Form improvements */
+            .form-group input,
+            .form-group textarea {
+                padding: 1.2rem;
+                font-size: 1rem;
+            }
+            
+            /* Social links mobile */
+            .social-links {
+                gap: 1.5rem;
+            }
+            
+            .social-link {
+                width: 55px;
+                height: 55px;
+                font-size: 1.3rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            /* Extra small devices */
+            .container {
+                padding: 0 1rem;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .achievement-highlight {
+                padding: 1rem;
+            }
+            
+            .metric-number {
+                font-size: 1.5rem;
+            }
+            
+            .contact-form {
+                padding: 1.5rem;
+            }
+            
+            .contact-card {
+                padding: 1rem;
+            }
+        }
+    </style>
 </head>
 <body>
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero page-loading">
         <div class="container">
         <div class="hero-content">
-                <div class="hero-grid">
-                    <div class="hero-text">
+                <div class="hero-extreme-layout">
+                    <div class="hero-text-extreme-left">
                         <h1 class="hero-title">Kunj Chacha</h1>
-                        <p class="hero-subtitle">Program Manager at Blenheim Chalcot | Building Innovative Technology Businesses</p>
-                        <p class="hero-description">Transforming Processes, Maximizing Efficiency & Driving Strategic Growth</p>
+                        <p class="hero-subtitle">Program Manager • Business Leader</p>
+                        <p class="hero-description">Leading process automation initiatives and operational excellence across multiple business units. Specializing in building cross-functional teams and implementing data-driven solutions.</p>
                         <div class="hero-actions">
-                            <a href="#contact" class="btn btn-primary">
-                                <i class="fas fa-envelope"></i>
-                                Get In Touch
+                            <a href="#about" class="btn btn-primary smooth-scroll" id="get-to-know-me">
+                                Get to Know Me <i class="fas fa-arrow-right"></i>
                             </a>
-                            <a href="#experience" class="btn btn-secondary">
-                                <i class="fas fa-arrow-down"></i>
-                                View Experience
-                            </a>
-                        </div>
                 </div>
-                    <div class="hero-image">
+                </div>
+                    <div class="hero-image-extreme-right">
                         <img src="assets/images/kunj-chacha-headshot.jpg" 
                              alt="Kunj Chacha - Professional Headshot" 
                              class="profile-image"
-                             onerror="this.src='https://via.placeholder.com/400x400/6366f1/ffffff?text=KC'">
-                </div>
+                             style="display: block; width: 300px; height: 300px; border-radius: 50%; object-fit: cover;"
+                             onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';"
+                             onload="this.style.display='block'; this.nextElementSibling.style.display='none';">
+                        <div class="profile-image-fallback" style="display: none;">
+                            <div class="profile-initials">KC</div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- About Section -->
-    <section class="section about">
+    <section class="section about" id="about">
         <div class="container">
-            <h2 class="section-title">About</h2>
-            <div class="about-content">
-                
+            <h2 class="section-title fade-in about-title-right">About</h2>
+            <div class="about-content fade-in stagger-1">
+                <div class="about-intro">
+                    <p class="about-text">
+                        I'm <strong>Kunj Chacha</strong>, a Program Manager at <strong>Blenheim Chalcot India</strong>, where I specialize in <strong>process automation, operational excellence, and cross-functional leadership</strong>. My work focuses on building scalable systems, optimizing workflows, and delivering data-driven solutions that unlock growth for businesses.
+                    </p>
+                    <p class="about-text">
+                        Over the years, I've had the privilege of working across <strong>technology startups, large corporations, educational institutions, and financial services</strong>, consistently driving measurable impact. Some highlights include: <strong>Revenue Growth:</strong> Delivered <strong>₹3.6 Cr+ in revenue</strong> during UK market expansion, exceeding targets by 20%. <strong>Operational Efficiency:</strong> Led automation initiatives that reduced manual effort by <strong>40%</strong>, saving <strong>200+ hours annually</strong>. <strong>Talent Acquisition:</strong> Spearheaded campus recruitment at <strong>BITS Pilani</strong> and <strong>ISB</strong>, hiring 50+ professionals with a <strong>95% retention rate</strong>. <strong>Innovation & Productivity:</strong> Directed a <strong>15-member cross-functional team</strong> to implement GitHub Copilot, boosting developer productivity by 25%.
+                    </p>
+                    <p class="about-text">
+                        I bring experience in <strong>strategic planning, stakeholder management, and client relations</strong>, often acting as a trusted advisor to senior leadership. My academic background includes an <strong>Executive Program in New Product Development & Marketing Strategy at IIM Visakhapatnam</strong> (2025) and a <strong>Bachelor's in Management Studies (Marketing)</strong>.
+                    </p>
+                    <p class="about-text">
+                        I'm passionate about <strong>scaling businesses, driving innovation, and building teams that thrive in dynamic, high-growth environments</strong>.
+                    </p>
+                </div>
+                </div>
+                </div>
+    </section>
+
+
+    <!-- Projects & Skills Combined Section -->
+    <section class="section projects-skills">
+        <div class="container">
+            <h2 class="section-title projects-skills-title-right">Projects & Skills</h2>
             
-            
-            
-            <p class="about-text">
-                Results-driven business leader with 10+ years of experience in sales, operations, project management, and process automation across diverse industries. Proven ability to lead cross-functional teams, optimize workflows, and drive revenue growth, having successfully delivered INR 3.6 Cr+ in sales while improving operational efficiency by 40%. Experienced in strategic planning, stakeholder management, and with a track record of driving teams of 15-24 members to exceed performance targets. Adept at leveraging Salesforce, data analytics, and automation tools to enhance business processes and decision-making. A trusted advisor to senior leadership, skilled in negotiation and client relations. Passionate about driving scalable growth, operational excellence to deliver measurable impact in dynamic, high-growth environments. Now seeking to drive strategic business transformation, process optimization, and revenue growth in a dynamic, high-impact environment. Passionate about enhancing operational efficiency, scaling teams, and delivering data-driven solutions that drive measurable success.
-            </p>
-        
-        
-        
-        
-                <p class="about-text">
-                    Currently, I'm a Program Manager at Blenheim Chalcot, where I lead process automation initiatives and operational 
-                    excellence across multiple business units. I specialize in building cross-functional teams, optimizing workflows, 
-                    and implementing data-driven solutions that enhance business performance.
-                </p>
-                <p class="about-text">
-                    In the past, I've had the opportunity to drive business growth across diverse industries — from technology startups 
-                    and large corporations to educational institutions and financial services. I've successfully delivered 
-                    <strong>INR 3.6 Cr+</strong> in revenue while improving operational efficiency by <strong>40%</strong>.
-                </p>
-                
-                <div class="skills-compact">
-                    <div class="skill-category-compact">
-                        <h3 class="category-title-compact">
-                            <i class="fas fa-cogs"></i>
-                            Leadership & Management
-                        </h3>
-                        <div class="skills-horizontal">
-                            <span class="skill-tag expert">Project Management</span>
-                            <span class="skill-tag expert">Team Leadership</span>
-                            <span class="skill-tag advanced">Strategic Planning</span>
+            <div class="projects-skills-blocks">
+                <!-- Block 1: Project Left, Skills Right -->
+                <div class="block-row">
+                    <div class="project-block">
+                        <h3 class="block-title">End-to-End Process Automation</h3>
+                        <p class="block-description">Led comprehensive automation initiatives for Blenheim Chalcot India, streamlining critical business workflows including travel approvals, SOW generation, and service pack management. Implemented AI-powered solutions and custom automation scripts, transforming manual processes into efficient, automated systems.</p>
+                        <div class="block-metrics">40% Manual Effort Reduction • 200+ Hours Saved Annually • 100% Process Compliance</div>
+                </div>
+                    <div class="skills-block">
+                        <h3 class="block-title">Strategic Planning & Problem Solving</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">Strategic Planning</span>
+                            <span class="skill-tag expert">Problem Solving</span>
                             <span class="skill-tag advanced">Stakeholder Management</span>
+                            <span class="skill-tag advanced">Sales Operations</span>
+            </div>
+        </div>
+                </div>
+                
+                <!-- Block 2: Skills Left, Project Right -->
+                <div class="block-row">
+                    <div class="skills-block">
+                        <h3 class="block-title">Data Analytics & Visualization</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">Microsoft Power BI</span>
+                            <span class="skill-tag expert">Looker Studio</span>
+                            <span class="skill-tag advanced">SQL</span>
+                            <span class="skill-tag advanced">Data Analytics</span>
                         </div>
                     </div>
-
-                    <div class="skill-category-compact">
-                        <h3 class="category-title-compact">
-                            <i class="fas fa-chart-line"></i>
-                            Business & Operations
-                        </h3>
-                        <div class="skills-horizontal">
-                            <span class="skill-tag expert">Process Optimization</span>
-                            <span class="skill-tag advanced">Business Development</span>
-                            <span class="skill-tag expert">Revenue Growth</span>
-                            <span class="skill-tag advanced">Business Analysis</span>
-                        </div>
+                    <div class="project-block">
+                        <h3 class="block-title">Campus Recruitment Excellence</h3>
+                        <p class="block-description">Spearheaded comprehensive campus recruitment drives at premier institutions including BITS Pilani and Indian School of Business for Blenheim Chalcot India. Developed structured assessment frameworks, conducted multi-round interviews, and implemented comprehensive onboarding programs.</p>
+                        <div class="block-metrics">50+ Professionals Hired • 95% Retention Rate • 8 Campus Visits</div>
+                    </div>
                 </div>
-
-                    <div class="skill-category-compact">
-                        <h3 class="category-title-compact">
-                            <i class="fas fa-tools"></i>
-                            Technology & Tools
-                        </h3>
-                        <div class="skills-horizontal">
-                            <span class="skill-tag advanced">Salesforce CRM</span>
-                            <span class="skill-tag intermediate">Data Analytics</span>
+                
+                <!-- Block 3: Project Left, Skills Right -->
+                <div class="block-row">
+                    <div class="project-block">
+                        <h3 class="block-title">UK Market Expansion Success</h3>
+                        <p class="block-description">Led strategic expansion into the UK market for Whitehat Jr as Senior Manager, Strategic Sales. Developed comprehensive go-to-market strategies, built key partnerships, and implemented data-driven sales processes within a highly competitive educational technology landscape.</p>
+                        <div class="block-metrics">INR 3.64 Cr Revenue Generated • 20% Above Target • INR 85K Avg Deal Size</div>
+                    </div>
+                    <div class="skills-block">
+                        <h3 class="block-title">Process & Technology</h3>
+                        <div class="skills-list">
                             <span class="skill-tag expert">Process Automation</span>
-                            <span class="skill-tag advanced">Product Management</span>
-                </div>
-                </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section class="section experience">
-        <div class="container">
-            <h2 class="section-title">Experience</h2>
-            <div class="experience-timeline">
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Program Manager</h3>
-                    <h4 class="timeline-company">Blenheim Chalcot India</h4>
-                    <span class="timeline-date">July 2023 – Present</span>
-                    <p class="timeline-subtitle">Process Automations & Transformation | Operational Excellence</p>
-                    <p class="timeline-subtitle-2">Delivery Management & Strategy</p>
-                    <p class="timeline-description">Reported directly to CEO & Director of Technology & Finance Operations. Led client delivery for global B2B digital media firm, managing campaigns across finance, HR, and digital marketing verticals as Client & Delivery Manager for Contentive – BC's Portfolio Co. Led end-to-end automation initiatives for BC India, streamlining workflows (travel approvals, SOW, service packs) to reduce manual effort by 40% and save 200+ hours annually. Spearheaded campus recruitment drives for BITS Pilani and Indian School of Business, hiring 50+ professionals with a 95% retention rate through structured onboarding and performance tracking. Directed 15-member cross-functional teams to implement GitHub Copilot toolkit and API security audits, boosting developer productivity by 25% and ensuring 100% compliance. Designed and deployed BC India's Central Repository, improving document accessibility and reducing search time by 30%. Collaborated with C-suite to align ITC's senior-level recruitment strategy with business goals, filling 20+ leadership roles within 6 weeks (30% faster than industry average).</p>
-                </div>
-            </div>
-        
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Senior Manager, Strategic Sales</h3>
-                    <h4 class="timeline-company">Whitehat Jr</h4>
-                    <span class="timeline-date">July 2021 – Nov 2022</span>
-                    <p class="timeline-subtitle">Strategic Sales & Leadership | Process Transformation</p>
-                    <p class="timeline-subtitle-2">Revenue Growth & Retention</p>
-                    <p class="timeline-description">Reported directly to Head of Sales & Operations. Career Progression: Promoted from Sales Manager → Senior Manager, leading UK sales operations with full ownership of pre-sales and post-sales support. Sales & Revenue Growth: UK market expansion, generating INR 3.64 Cr in revenue within 6 months, exceeding targets by 20%. Maintained an average deal size of INR 85,000, consistently surpassing weekly targets of INR 3.25 Lakh. Led a 12-member sales team, driving revenue of INR 22-25 Lakh/month, improving individual performance by 30% via Salesforce CRM coaching & pipeline optimization. Process & Operational Improvements: Revamped post-sales service workflows, increasing customer referral rates by 15% and reducing onboarding time by 50%. Partnered with marketing teams to launch BTL campaigns (direct mail, catalogues), boosting lead generation by 25% MoM. Salesforce CRM & Performance Tracking: Monitored pipeline data, won vs. lost opportunities, and lead response times to optimize sales strategy. Conducted coaching & counselling for sales personnel, improving conversion rates and team performance.</p>
-                </div>
-            </div>
-        
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Business Head</h3>
-                    <h4 class="timeline-company">Flint Chem</h4>
-                    <span class="timeline-date">Dec 2020 – June 2021</span>
-                    <p class="timeline-subtitle">Process Automation & Improvements | Sales Funnel Development</p>
-                    <p class="timeline-subtitle-2">Business Expansion & Operations</p>
-                    <p class="timeline-description">Business Development & Operations: Managed business development and operations for chemical distribution, optimizing inventory turnover by 15%. Marketed an entire branch of cosmetic products under MY CARE Brand. Sales & Revenue Growth: Successfully closed 35+ deals, Hired and managed a team of 70 employees using a pyramidal hierarchy structure, driving sales and on-site revenue. Channel & Sales Funnel Development: Built the entire sales distribution network from scratch for the cosmetics distribution line. Implemented sales funnel automation, improving lead conversion and efficiency. Resource & Team Management: Recruited and structured a full-scale sales team for an inception-stage company. Allocated resources efficiently to ensure a steady supply of raw materials for the manufacturing unit.</p>
-                </div>
-            </div>
-        
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Manager, Sales & Retention</h3>
-                    <h4 class="timeline-company">Tech Mahindra Business Services Ltd</h4>
-                    <span class="timeline-date">May 2019 – Dec 2020</span>
-                    <p class="timeline-subtitle">Process Transformation | Operational Excellence</p>
-                    <p class="timeline-subtitle-2">Client Relationship Management</p>
-                    <p class="timeline-description">Sales & Revenue Growth: Closed high-value B2B telecom contracts, achieving 110% of quarterly targets. Led a team of 14 professionals to maximize revenue via new sales, retention, and referral strategies. Client & Account Management: Absorbed by the client to manage Sales & Retention teams, focusing on upselling, negotiations, and client satisfaction. Handled customer service escalations, ensuring seamless service delivery. Process Transformation & Automation: Developed process automation initiatives to improve efficiency and sales workflows. Contributed to data-driven decision-making, optimizing customer retention efforts.</p>
-                </div>
+                            <span class="skill-tag expert">Salesforce CRM</span>
+                            <span class="skill-tag advanced">Team Leadership</span>
+                            <span class="skill-tag advanced">Revenue Growth</span>
+                        </div>
+                    </div>
                 </div>
                 
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Senior Customer Advisor, KYC Dept</h3>
-                    <h4 class="timeline-company">Teleperformance</h4>
-                    <span class="timeline-date">Sept 2018 – April 2019</span>
-                    <p class="timeline-subtitle">KYC & Compliance | High-Risk Account Management</p>
-                    <p class="timeline-subtitle-2">Workforce & Data Management</p>
-                    <p class="timeline-description">Banking Operations: Managed & conducted KYC verification for high-risk clientele for Barclays Bank, including Arms & Ammunition dealers, Government & Military contracts. Led Operations, Workforce Management (WFM), and MIS, handling data structuring. Gained extensive exposure to operations management, process optimization, and compliance handling in a highly specialized 30-member department.</p>
-                </div>
-                </div>
-                
-            <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-content">
-                    <h3 class="timeline-title">Customer Service & Sales Operations</h3>
-                    <h4 class="timeline-company">Jet Airways | Concentrix</h4>
-                    <span class="timeline-date">May 2018 – Sept 2018</span>
-                    <p class="timeline-subtitle">Customer Service | Account Management</p>
-                    <p class="timeline-subtitle-2">Sales & Business Development</p>
-                    <p class="timeline-description">Customer service and sales operations role with Jet Airways through Concentrix.</p>
-                </div>
-            </div>
-    </section>
-            </div>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section class="section education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-timeline">
-                <div class="timeline-item">
-                    <div class="timeline-number">1</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-date">Nov 2024 - Jun 2025</div>
-                            <h3 class="timeline-title">Executive Program in New Product Development & Marketing Strategy, Marketing (Niche: Product)</h3>
-                            <p class="timeline-company">Indian Institute of Management Visakhapatnam</p>
+                <!-- Block 4: Skills Left, Project Right -->
+                <div class="block-row">
+                    <div class="skills-block">
+                        <h3 class="block-title">Business Development</h3>
+                        <div class="skills-list">
+                            <span class="skill-tag expert">Business Development</span>
+                            <span class="skill-tag expert">Process Orchestration</span>
+                            <span class="skill-tag advanced">Project Management</span>
+                            <span class="skill-tag advanced">Visualization</span>
                         </div>
-                        <p class="timeline-description">
-                            Certification - IIMV. Specialized in Product Marketing and Product Management.
-                        </p>
                     </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-number">2</div>
-                    <div class="timeline-content">
-                        <div class="timeline-header">
-                            <div class="timeline-date">Jun 2016 - Oct 2019</div>
-                            <h3 class="timeline-title">Bachelor's degree, Business, Management, Marketing, and Related Support Services</h3>
-                            <p class="timeline-company">Chetana's R. K. Institute of Management & Research</p>
-                        </div>
-                        <p class="timeline-description">
-                            Activities and societies: Rifle Shooting, Snooker.
-                        </p>
+                    <div class="project-block">
+                        <h3 class="block-title">GitHub Copilot Implementation</h3>
+                        <p class="block-description">Directed 15-member cross-functional teams to implement GitHub Copilot toolkit and conduct comprehensive API security audits for Blenheim Chalcot India. Led the integration of AI-powered development tools, established security protocols, and ensured complete compliance across all development workflows.</p>
+                        <div class="block-metrics">25% Productivity Boost • 100% Compliance Rate • 15 Team Members</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section class="section projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=250&fit=crop&crop=center" alt="Process Automation Dashboard" class="project-img">
-                        <div class="project-overlay">
-                            <i class="fas fa-robot"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Process Automation Initiative</h3>
-                        <p class="project-description">
-                            Led comprehensive automation of critical business workflows including travel approvals, 
-                            SOW generation, and service pack management. Implemented AI-powered solutions using 
-                            GitHub Copilot and custom automation scripts, resulting in 40% reduction in manual 
-                            effort and 200+ hours saved annually across multiple departments.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">40%</span>
-                                <span class="metric-label">Efficiency Gain</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">200+</span>
-                                <span class="metric-label">Hours Saved</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">5</span>
-                                <span class="metric-label">Workflows Automated</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Workflow Automation</span>
-                            <span class="tech-tag">Process Optimization</span>
-                            <span class="tech-tag">GitHub Copilot</span>
-                            <span class="tech-tag">AI Integration</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://github.com/kunjchacha" target="_blank" class="project-link">
-                                <i class="fab fa-github"></i> View Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Case Study
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1521737711867-e3b97375f902?w=400&h=250&fit=crop&crop=center" alt="Campus Recruitment" class="project-img">
-                        <div class="project-overlay">
-                            <i class="fas fa-users"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">Campus Recruitment Drive</h3>
-                        <p class="project-description">
-                            Orchestrated comprehensive recruitment campaigns at premier institutions including 
-                            BITS Pilani and Indian School of Business. Developed structured assessment frameworks, 
-                            conducted technical interviews, and implemented performance tracking systems. 
-                            Successfully hired 50+ high-potential professionals with 95% retention rate.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">50+</span>
-                                <span class="metric-label">Professionals Hired</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">95%</span>
-                                <span class="metric-label">Retention Rate</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">8</span>
-                                <span class="metric-label">Campus Visits</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Talent Acquisition</span>
-                            <span class="tech-tag">Campus Relations</span>
-                            <span class="tech-tag">Performance Tracking</span>
-                            <span class="tech-tag">Assessment Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://linkedin.com/in/kunjchacha" target="_blank" class="project-link">
-                                <i class="fab fa-linkedin"></i> View Process
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-chart-bar"></i> Results
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop&crop=center" alt="Market Expansion Analytics" class="project-img">
-                        <div class="project-overlay">
-                            <i class="fas fa-chart-line"></i>
-                        </div>
-                    </div>
-                    <div class="project-content">
-                        <h3 class="project-title">UK Market Expansion</h3>
-                        <p class="project-description">
-                            Led strategic expansion into the UK market for Whitehat Jr, developing comprehensive 
-                            go-to-market strategies and building key partnerships. Implemented data-driven sales 
-                            processes and customer acquisition funnels, resulting in exceptional revenue growth 
-                            and market penetration within a competitive landscape.
-                        </p>
-                        <div class="project-metrics">
-                            <div class="metric">
-                                <span class="metric-value">INR 3.64 Cr</span>
-                                <span class="metric-label">Revenue Generated</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">20%</span>
-                                <span class="metric-label">Above Target</span>
-                            </div>
-                            <div class="metric">
-                                <span class="metric-value">INR 85K</span>
-                                <span class="metric-label">Avg Deal Size</span>
-                            </div>
-                        </div>
-                        <div class="project-tech">
-                            <span class="tech-tag">Market Expansion</span>
-                            <span class="tech-tag">Revenue Growth</span>
-                            <span class="tech-tag">Strategic Sales</span>
-                            <span class="tech-tag">Partnership Development</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://linkedin.com/in/kunjchacha" target="_blank" class="project-link">
-                                <i class="fab fa-linkedin"></i> Strategy
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-trophy"></i> Results
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Contact Section -->
     
                 <section class="section awards" id="awards">
-                    <div class="container">
-                        <h2 class="section-title">Awards & Recognition</h2>
-                        <div class="awards-grid">
-                            
-            <div class="award-item">
-                <h3 class="award-title">Star Performer</h3>
-                <h4 class="award-company">Blenheim Chalcot India</h4>
-                <span class="award-year">2024</span>
-            </div>
-        
-            <div class="award-item">
-                <h3 class="award-title">Best Manager</h3>
-                <h4 class="award-company">Whitehat Jr</h4>
-                <span class="award-year">2022</span>
-            </div>
-        
-            <div class="award-item">
-                <h3 class="award-title">Top Performer</h3>
-                <h4 class="award-company">Flint Chemical</h4>
-                <span class="award-year">2020</span>
-            </div>
-        
-            <div class="award-item">
-                <h3 class="award-title">Innovation Excellence Award</h3>
-                <h4 class="award-company">Tech Mahindra</h4>
-                <span class="award-year">2019</span>
-            </div>
-        
-                        </div>
+        <div class="container">
+                        <h2 class="section-title awards-title-right">Awards & Recognition</h2>
+                        <div class="awards-funky">
+                            <div class="award-card funky-1">
+                                <div class="award-badge">
+                                    <i class="fas fa-star"></i>
                     </div>
-                </section>
-            
+                                <div class="award-content-funky">
+                                    <h3 class="award-title-funky">Star Performer</h3>
+                                    <div class="award-company-funky">Blenheim Chalcot India</div>
+                                    <div class="award-year-funky">2024</div>
+                                    <p class="award-description-funky">Exceptional performance in process automation and team leadership</p>
+                </div>
+                                <div class="award-glow"></div>
+                    </div>
+                            
+                            <div class="award-card funky-2">
+                                <div class="award-badge">
+                                    <i class="fas fa-trophy"></i>
+                </div>
+                                <div class="award-content-funky">
+                                    <h3 class="award-title-funky">Best Manager</h3>
+                                    <div class="award-company-funky">Whitehat Jr</div>
+                                    <div class="award-year-funky">2022</div>
+                                    <p class="award-description-funky">Outstanding leadership in UK market expansion and team development</p>
+                    </div>
+                                <div class="award-glow"></div>
+                </div>
+                            
+                            <div class="award-card funky-3">
+                                <div class="award-badge">
+                                    <i class="fas fa-medal"></i>
+                    </div>
+                                <div class="award-content-funky">
+                                    <h3 class="award-title-funky">Top Performer</h3>
+                                    <div class="award-company-funky">Flint Chemical</div>
+                                    <div class="award-year-funky">2020</div>
+                                    <p class="award-description-funky">Excellence in business operations and process optimization</p>
+                </div>
+                                <div class="award-glow"></div>
+                            </div>
+                            
+                            <div class="award-card funky-4">
+                                <div class="award-badge">
+                                    <i class="fas fa-lightbulb"></i>
+                                </div>
+                                <div class="award-content-funky">
+                                    <h3 class="award-title-funky">Innovation Excellence</h3>
+                                    <div class="award-company-funky">Tech Mahindra</div>
+                                    <div class="award-year-funky">2019</div>
+                                    <p class="award-description-funky">Innovative approaches to process transformation and automation</p>
+                                </div>
+                                <div class="award-glow"></div>
+                            </div>
+            </div>
+        </div>
+    </section>
+
         <section class="section contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <p class="section-description">
-                I'm always interested in new opportunities and collaborations. 
-                Whether you have a question or just want to say hi, I'll try my best to get back to you!
-            </p>
+            <h2 class="section-title contact-title-right">Get In Touch</h2>
             
-            <div class="contact-grid">
-                <div class="contact-form-container">
-                    <form id="contact-form" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">
-                            <i class="fas fa-paper-plane"></i>
-                            Send Message
-                        </button>
-                    </form>
-                </div>
-                
-                <div class="contact-info">
-                    <h3>Let's Connect</h3>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <span>Mumbai, Maharashtra, India</span>
+            <div class="contact-simple">
+                <div class="contact-box">
+                    <div class="contact-icon">
+                    <i class="fab fa-linkedin"></i>
                     </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <a href="mailto:kunjnikhilchacha@gmail.com">kunjnikhilchacha@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fab fa-linkedin"></i>
+                    <div class="contact-details">
+                        <h3>LinkedIn</h3>
                         <a href="https://linkedin.com/in/kunjchacha" target="_blank">linkedin.com/in/kunjchacha</a>
                     </div>
-                    <div class="contact-item">
-                        <i class="fab fa-github"></i>
-                        <a href="https://github.com/kunjchacha" target="_blank">github.com/kunjchacha</a>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="https://linkedin.com/in/kunjchacha" target="_blank" class="social-link">
-                    <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/kunjchacha" target="_blank" class="social-link">
-                            <i class="fab fa-github"></i>
-                </a>
-                        <a href="mailto:kunjnikhilchacha@gmail.com" class="social-link">
+                </div>
+                <div class="contact-box">
+                    <div class="contact-icon">
                     <i class="fas fa-envelope"></i>
-                        </a>
+                    </div>
+                    <div class="contact-details">
+                        <h3>Email</h3>
+                        <a href="mailto:kunjnikhilchacha@gmail.com">kunjnikhilchacha@gmail.com</a>
                     </div>
                 </div>
             </div>
@@ -562,6 +1513,168 @@
             section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
             observer.observe(section);
         });
+
+        // Enhanced button interactions
+        document.querySelectorAll('.btn').forEach(btn => {
+            btn.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px)';
+            });
+            
+            btn.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Skill tag hover effects
+        document.querySelectorAll('.skill-tag').forEach(tag => {
+            tag.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-2px) scale(1.05)';
+            });
+            
+            tag.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0) scale(1)';
+            });
+        });
+
+        // Project card interactions
+        document.querySelectorAll('.project-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-8px)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Timeline item interactions
+        document.querySelectorAll('.timeline-content').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-6px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+
+        // Award item interactions
+        document.querySelectorAll('.award-item').forEach(item => {
+            item.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-6px)';
+            });
+            
+            item.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+            });
+        });
+    </script>
+    
+    <script>
+        // Scroll Animation Observer
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all animated elements
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+            animatedElements.forEach(el => observer.observe(el));
+            
+            // Add staggered animations to skill categories
+            const skillCategories = document.querySelectorAll('.skill-category-horizontal');
+            skillCategories.forEach((category, index) => {
+                category.classList.add('fade-in', `stagger-${(index % 5) + 1}`);
+                observer.observe(category);
+            });
+            
+            // Add staggered animations to project cards
+            const projectCards = document.querySelectorAll('.project-card');
+            projectCards.forEach((card, index) => {
+                card.classList.add('fade-in', `stagger-${(index % 5) + 1}`);
+                observer.observe(card);
+            });
+            
+            // Add staggered animations to award items
+            const awardItems = document.querySelectorAll('.award-item');
+            awardItems.forEach((item, index) => {
+                item.classList.add('fade-in', `stagger-${(index % 5) + 1}`);
+                observer.observe(item);
+            });
+            
+            // Add staggered animations to achievement metrics
+            const achievementMetrics = document.querySelectorAll('.achievement-metric');
+            achievementMetrics.forEach((metric, index) => {
+                metric.classList.add('scale-in', `stagger-${(index % 3) + 1}`);
+                observer.observe(metric);
+            });
+        });
+
+        // Enhanced smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    // Add sliding animation
+                    this.style.transform = 'translateX(10px)';
+                    setTimeout(() => {
+                        this.style.transform = 'translateX(0)';
+                    }, 150);
+                    
+                    // Normal smooth scroll behavior for all sections
+                    
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Add loading animation to page
+        window.addEventListener('load', () => {
+            document.body.classList.add('loaded');
+        });
+
+        // Enhanced scroll animations with stagger
+        const animateOnScroll = () => {
+            const elements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+            elements.forEach((el, index) => {
+                const elementTop = el.getBoundingClientRect().top;
+                const elementVisible = 150;
+                
+                if (elementTop < window.innerHeight - elementVisible) {
+                    setTimeout(() => {
+                        el.classList.add('visible');
+                    }, index * 100);
+                }
+            });
+        };
+
+        // Throttled scroll event
+        let ticking = false;
+        const handleScroll = () => {
+            if (!ticking) {
+                requestAnimationFrame(() => {
+                    animateOnScroll();
+                    ticking = false;
+                });
+                ticking = true;
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        animateOnScroll(); // Run on load
     </script>
 </body>
 </html>
