@@ -1,11 +1,12 @@
-name: LinkedIn Auto-Sync
+name: LinkedIn Auto-Sync - DISABLED
 
 on:
-  schedule:
-    # Run every 6 hours
-    - cron: '0 */6 * * *'
-  workflow_dispatch:
-    # Allow manual trigger
+  # DISABLED - LinkedIn automation removed
+  # schedule:
+  #   # Run every 6 hours
+  #   - cron: '0 */6 * * *'
+  # workflow_dispatch:
+  #   # Allow manual trigger
 
 jobs:
   sync-linkedin:
