@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 // Your actual Google Doc link
-const GOOGLE_DOC_URL = 'https://docs.google.com/document/d/1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW/edit?usp=sharing&ouid=110093156976609512851&rtpof=true&sd=true';
+const GOOGLE_DOC_URL = 'https://docs.google.com/document/d/e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA/pub';
 
 class GoogleDocsRealScraper {
     constructor() {

@@ -22,7 +22,7 @@ class GoogleDocsMonthlyScheduler {
 
         console.log('🚀 Starting Google Docs Monthly Auto-Sync Scheduler...');
         console.log('📅 Schedule: Every 30 days at 9:00 AM');
-        console.log('📄 Document ID: 1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW');
+        console.log('📄 Document ID: e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA');
 
         // Schedule sync every 30 days at 9:00 AM
         // Using cron expression: 0 9 */30 * * (every 30 days at 9 AM)

@@ -10,7 +10,7 @@ const fs = require('fs');
 const path = require('path');
 
 // The correct public URL
-const GOOGLE_DOC_URL = 'https://docs.google.com/document/d/1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW/';
+const GOOGLE_DOC_URL = 'https://docs.google.com/document/d/e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA/pub';
 
 class GoogleDocsCorrectScraper {
     constructor() {

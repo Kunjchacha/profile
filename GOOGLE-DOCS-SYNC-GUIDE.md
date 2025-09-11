@@ -6,8 +6,8 @@ Your portfolio now automatically syncs with your Google Docs resume every 30 day
 
 ## 📄 **Google Doc Details**
 
-- **Document ID**: `1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW`
-- **Document URL**: https://docs.google.com/document/d/1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW/edit
+- **Document ID**: `e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA`
+- **Document URL**: https://docs.google.com/document/d/e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA/pub
 - **Sync Frequency**: Every 30 days
 - **Last Sync**: Check `data/google-docs-profile.json`
 
@@ -101,7 +101,7 @@ webume-portfolio/
 ## 📝 **Updating Your Resume**
 
 ### **To Update Your Portfolio:**
-1. **Edit your Google Doc**: https://docs.google.com/document/d/1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW/edit
+1. **Edit your Google Doc**: https://docs.google.com/document/d/e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA/pub
 2. **Wait for automatic sync** (every 30 days)
 3. **Or run manual sync**: `npm run sync-google-docs`
 

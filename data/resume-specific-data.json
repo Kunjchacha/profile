@@ -1,39 +1,111 @@
 {
+  "personalInfo": {
+    "name": "Program Manager",
+    "title": "+917304042382 | kunjnikhilchacha@gmail.com | LinkedIn",
+    "phone": "PROFILE",
+    "email": "PROFILE",
+    "linkedin": "PROFILE"
+  },
   "currentRole": {
     "position": "Program Manager",
     "company": "Blenheim Chalcot India",
     "period": "July 2023 – Present",
-    "description": "Leading process automation initiatives and operational excellence across multiple business units. Specializing in building cross-functional teams, optimizing workflows, and implementing data-driven solutions that enhance business performance."
+    "description": "Program Manager, Blenheim Chalcot India, July 2023 – Present Process Automations & Transformation | Operational Excellence | Delivery Management & Strategy Reported directly to CEO & Director of Techn..."
   },
   "keyAchievements": [
-    "Delivered INR 3.6 Cr+ in revenue while improving operational efficiency by 40%",
-    "Led end-to-end automation initiatives, reducing manual effort by 40% and saving 200+ hours annually",
-    "Spearheaded campus recruitment drives at BITS Pilani and ISB, hiring 50+ professionals with 95% retention rate",
-    "Generated INR 3.64 Cr revenue in UK market expansion, exceeding targets by 20%",
-    "Directed 15-member cross-functional teams to implement GitHub Copilot toolkit, boosting productivity by 25%"
+    "Results-driven business leader with 10+ years of experience in sales, operations, project management, and process automation across diverse industries. Proven ability to lead cross-functional teams, optimize workflows, and drive revenue growth, having successfully delivered INR 3.6 Cr+ in sales while improving operational efficiency by 40%. Experienced in strategic planning, stakeholder management, and with a track record of driving teams of 15-24 members to exceed performance targets. Adept at leveraging Salesforce, data analytics, and automation tools to enhance business processes and decision-making.",
+    "Spearheaded campus recruitment drives for BITS Pilani and Indian School of Business, hiring 50+ professionals with a 95% retention rate through structured onboarding and performance tracking.",
+    "UK market expansion, generating INR 3.64 Cr in revenue within 6 months, exceeding targets by 20%.",
+    "Closed high-value B2B telecom contracts, achieving 110% of quarterly targets."
   ],
   "coreSkills": [
     "Strategic Planning & Problem Solving",
     "Stakeholder Management",
     "Sales Operations & Business Development",
     "Process Orchestration & Project Management",
-    "Data Analytics & Visualization",
-    "Microsoft Power BI",
+    "Data Analytics & Visualization (Microsoft Power BI",
     "Looker Studio",
-    "SQL",
-    "Salesforce CRM",
-    "Process Automation",
-    "Team Leadership",
-    "Revenue Growth"
+    "SQL)",
+    "Fundamentals of Digital Marketing: Google Digital Academy (Skillshop)",
+    "Google Analytics: Great Learning",
+    "Star Performer – Blenheim Chalcot India",
+    "2024",
+    "Best Manager – Whitehat Jr",
+    "2022",
+    "Top Performer – Flint Chemical",
+    "2020",
+    "Innovation Excellence Award – Tech Mahindra",
+    "2019",
+    "REFERENCES",
+    "Girish Manik",
+    "Former CEO",
+    "Blenheim Chalcot India: +91982001212",
+    "girishmanik@gmail.com",
+    "Rohit Sareen",
+    "Chief Product Officer",
+    "Blenheim Chalcot India: +919820462082 – rohitdksareen@gmail.com",
+    "Reshma Kannan",
+    "HR Program Manager",
+    "Blenheim Chalcot India: +919920908669 – reshma0610@yahoo.com",
+    "Mairi-Claire Tay",
+    "Managing Director of Talent Acquisition",
+    "Blenheim Chalcot – mairi-claire.tay@blenheimchalcot.com",
+    "Valentina Dalpozzo",
+    "Head of Product",
+    "Contentive – valentina.dalpozzo@contentive.com"
+  ],
+  "education": [
+    "Executive Program in New Product Development & Marketing Strategy – IIM, Vishakhapatnam, Nov 2024 — Present",
+    "Bachelor of Management Studies (Marketing) – Chetana’s R.K. Institute of Management & Research Development, Jul 2016 — Oct 2019",
+    "Higher Secondary Education – Bal Bharati College of Commerce, Jul 2014 — Mar 2016",
+    "Secondary School Education – Aspee Nutan Academy, Mar 2014",
+    "Strategic Planning & Problem Solving",
+    "Stakeholder Management",
+    "Sales Operations & Business Development",
+    "Process Orchestration & Project Management",
+    "Data Analytics & Visualization (Microsoft Power BI, Looker Studio, SQL)",
+    "Fundamentals of Digital Marketing: Google Digital Academy (Skillshop)",
+    "Google Analytics: Great Learning",
+    "AWARDS"
   ],
   "awards": [
     "Star Performer – Blenheim Chalcot India, 2024",
     "Best Manager – Whitehat Jr, 2022",
     "Top Performer – Flint Chemical, 2020",
-    "Innovation Excellence Award – Tech Mahindra, 2019"
+    "Innovation Excellence Award – Tech Mahindra, 2019",
+    "Girish Manik, Former CEO, Blenheim Chalcot India: +91982001212, girishmanik@gmail.com",
+    "Rohit Sareen, Chief Product Officer, Blenheim Chalcot India: +919820462082 – rohitdksareen@gmail.com",
+    "Reshma Kannan, HR Program Manager, Blenheim Chalcot India: +919920908669 – reshma0610@yahoo.com",
+    "Mairi-Claire Tay, Managing Director of Talent Acquisition, Blenheim Chalcot – mairi-claire.tay@blenheimchalcot.com"
   ],
-  "education": [
+  "references": [
+    "Girish Manik, Former CEO, Blenheim Chalcot India: +91982001212, girishmanik@gmail.com",
+    "Rohit Sareen, Chief Product Officer, Blenheim Chalcot India: +919820462082 – rohitdksareen@gmail.com",
+    "Reshma Kannan, HR Program Manager, Blenheim Chalcot India: +919920908669 – reshma0610@yahoo.com",
+    "Mairi-Claire Tay, Managing Director of Talent Acquisition, Blenheim Chalcot – mairi-claire.tay@blenheimchalcot.com",
+    "Valentina Dalpozzo, Head of Product, Contentive – valentina.dalpozzo@contentive.com",
+    "Swaha Patnaik, Senior Manager, Whitehat Jr: +917829762714 – swahapatnaik@gmail.com"
+  ],
+  "projects": [
+    "Process Automations & Transformation | Operational Excellence | Delivery Management & Strategy",
+    "Led end-to-end automation initiatives for BC India, streamlining workflows (travel approvals, SOW, service packs) to reduce manual effort by 40% and save 200+ hours annually.",
+    "Spearheaded campus recruitment drives for BITS Pilani and Indian School of Business, hiring 50+ professionals with a 95% retention rate through structured onboarding and performance tracking.",
+    "Collaborated with C-suite to align ITC’s senior-level recruitment strategy with business goals, filling 20+ leadership roles within 6 weeks (30% faster than industry average).",
+    "Strategic Sales & Leadership | Process Transformation | Revenue Growth & Retention",
+    "UK market expansion, generating INR 3.64 Cr in revenue within 6 months, exceeding targets by 20%.",
+    "Led a 12-member sales team, driving revenue of INR 22-25 Lakh/month, improving individual performance by 30% via Salesforce CRM coaching & pipeline optimization.",
+    "Process Automation & Improvements | Sales Funnel Development | Business Expansion & Operations",
+    "Business Development & Operations:",
+    "Managed business development and operations for chemical distribution, optimizing inventory turnover by 15%.",
+    "Channel & Sales Funnel Development:",
+    "Implemented sales funnel automation, improving lead conversion and efficiency.",
+    "Process Transformation | Operational Excellence | Client Relationship Management",
+    "Process Transformation & Automation:",
+    "Developed process automation initiatives to improve efficiency and sales workflows.",
+    "Gained extensive exposure to operations management, process optimization, and compliance handling in a highly specialized 30-member department.",
+    "Customer Service | Account Management | Sales & Business Development",
     "Executive Program in New Product Development & Marketing Strategy – IIM, Vishakhapatnam, Nov 2024 — Present",
-    "Bachelor of Management Studies (Marketing) – Chetana's R.K. Institute of Management & Research Development, Jul 2016 — Oct 2019"
+    "Bachelor of Management Studies (Marketing) – Chetana’s R.K. Institute of Management & Research Development, Jul 2016 — Oct 2019",
+    "Sales Operations & Business Development"
   ]
 }

@@ -2,14 +2,14 @@
 
 /**
  * Google Docs Auto-Sync for Portfolio
- * Document ID: 1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW
+ * Document ID: e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA
  * Automatically syncs Google Docs resume data to portfolio website
  */
 
 const fs = require('fs');
 const path = require('path');
 
-const GOOGLE_DOC_ID = '1aksVkF5j53pBotJ4zddwKQHRnBOt8WdW';
+const GOOGLE_DOC_ID = 'e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA';
 
 class GoogleDocsSync {
     constructor() {

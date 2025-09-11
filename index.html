@@ -1240,6 +1240,66 @@
                 padding: 1rem;
             }
         }
+        
+        /* Contact CTA and Resume Download Styles */
+        .contact-cta {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        
+        .contact-message {
+            color: #e2e8f0;
+            font-size: 1.1rem;
+            margin-bottom: 2rem;
+            line-height: 1.6;
+        }
+        
+        .contact-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+        
+        .contact-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+        
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--bg-card) 0%, var(--bg-tertiary) 100%);
+            color: var(--text-primary);
+            border-color: var(--border);
+        }
+        
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(45, 212, 191, 0.3);
+        }
+        
+        /* Mobile responsiveness for contact buttons */
+        @media (max-width: 768px) {
+            .contact-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .contact-btn {
+                width: 100%;
+                max-width: 300px;
+                justify-content: center;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1255,6 +1315,11 @@
                         <div class="hero-actions">
                             <a href="#about" class="btn btn-primary smooth-scroll" id="get-to-know-me">
                                 Get to Know Me <i class="fas fa-arrow-right"></i>
+                            </a>
+                            <a href="https://docs.google.com/document/d/e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA/pub" 
+                               target="_blank" 
+                               class="btn btn-secondary">
+                                <i class="fas fa-download"></i> View Resume
                             </a>
                 </div>
                 </div>
@@ -1468,9 +1533,16 @@
             
             <div class="contact-cta">
                 <p class="contact-message">Ready to discuss your next project or opportunity? I'd love to hear from you!</p>
-                <a href="mailto:kunjnikhilchacha@gmail.com" class="btn btn-primary contact-btn">
-                    <i class="fas fa-paper-plane"></i> Send Message
-                </a>
+                <div class="contact-buttons">
+                    <a href="mailto:kunjnikhilchacha@gmail.com" class="btn btn-primary contact-btn">
+                        <i class="fas fa-paper-plane"></i> Send Message
+                    </a>
+                    <a href="https://docs.google.com/document/d/e/2PACX-1vTOxyH3PzDT-lGe2huhuw82fDTf5dflOzycAH0ERw-d3DGuE542MVUf8pw3P8uJkA/pub" 
+                       target="_blank" 
+                       class="btn btn-secondary contact-btn">
+                        <i class="fas fa-eye"></i> View Resume
+                    </a>
+                </div>
             </div>
         </div>
     </section>
